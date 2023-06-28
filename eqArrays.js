@@ -14,7 +14,7 @@ const assertEqual = function(actual, expected) {
   console.log(`❗️❗️❗️ ${actual} !== ${expected}`);
 };
 
-
+// this functions takes two arrays and returns a boolean value to represent if they are the same or not
 const eqArrays = function(array1, array2) {
   let matching = true;
 
@@ -22,19 +22,13 @@ const eqArrays = function(array1, array2) {
     const element1 = array1[i];
     const element2 = array2[i];
 
-    if (typeof(element1) !== typeof(element2)) {
-      matching = false; 
-      return matching;
-    }
-
-    if (element1 !== element2) {
+    if (element1 !== element2 || typeof(element1) !== typeof(element2)) {
       matching = false;
       
       return matching;
     }
-
-    
   }
+
   return matching;
 }
 
