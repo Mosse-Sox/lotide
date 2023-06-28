@@ -14,6 +14,7 @@ const assertEqual = function(actual, expected) {
   console.log(`❗️❗️❗️ ${actual} !== ${expected}`);
 };
 
+// this function takes an array and returns all but the first element of the array
 const tail = function(array) {
   let tail = new Array();
 
@@ -29,6 +30,7 @@ const tail = function(array) {
   return undefined;
 };
 
+// test cases
 const words = [ "Yo Yo", "Lighthouse", "Labs" ];
 tail(words);
 assertEqual(words.length, 3);

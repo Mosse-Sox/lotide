@@ -12,7 +12,7 @@ const eqArrays = function(actual, expected) {
   }
 
   return matching;
-}
+};
 
 
 const assertArraysEqual = function(actual, expected) {
