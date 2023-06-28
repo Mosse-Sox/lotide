@@ -38,7 +38,7 @@ const without = function(array, itemToRemove) {
   }
 
   return arrayWithout;
-}
+};
 
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case
@@ -47,4 +47,4 @@ assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
 const veggies = ["carrot", "peppers", "cucumbers"];
 const veggiesWithoutPeppers = without(veggies, ["peppers"]);
-assertArraysEqual(veggiesWithoutPeppers, ["carrot", "peppers", "cucumbers"]);
+assertArraysEqual(veggiesWithoutPeppers, ["carrot", "cucumbers"]);

@@ -1,4 +1,4 @@
-const eqArrays = function (actual, expected) {
+const eqArrays = function(actual, expected) {
   let matching = true;
 
   for (let i = 0; i < actual.length; i++) {
@@ -15,7 +15,7 @@ const eqArrays = function (actual, expected) {
 };
 
 
-const assertArraysEqual = function (actual, expected) {
+const assertArraysEqual = function(actual, expected) {
 
   if (!eqArrays(actual, expected)) {
     console.log(`❗️❗️❗️ ${actual} !== ${expected}`);
@@ -25,7 +25,7 @@ const assertArraysEqual = function (actual, expected) {
   console.log(`🍀🍀🍀 ${actual} === ${expected}`);
 };
 
-const middle = function (array) {
+const middle = function(array) {
   let middleElements = [];
 
   if (array.length === 0 || array.length === 1 || array.length === 2) {
@@ -42,7 +42,7 @@ const middle = function (array) {
   const middleIndex = Math.floor(array.length / 2);
   middleElements.push(array[middleIndex]);
   return middleElements;
-}
+};
 
 // test cases
 assertArraysEqual(middle([4,5,6]), [5]);
