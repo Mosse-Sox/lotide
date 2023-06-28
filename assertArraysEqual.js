@@ -1,16 +1,33 @@
-const eqArrays = function(array1, array2) {
+const eqArrays = function(actual, expected) {
   let matching = true;
 
-  for (let i = 0; i < array1.length; i++) {
-    const element1 = array1[i];
-    const element2 = array2[i];
+  for (let i = 0; i < actual.length; i++) {
+    const actualElement = actual[i];
+    const expectedElement = expected[i];
 
-    if (element1 !== element2 || typeof(element1) !== typeof(element2)) {
+    if (actualElement !== expectedElement || typeof(actualElement) !== typeof(expectedElement)) {
       matching = false;
-      
       return matching;
     }
   }
 
   return matching;
+}
+
+
+const assertArraysEqual = function(actual, expected) {
+  
+  if (!eqArrays(actual, expected)) {
+    console.log(`❗️❗️❗️ ${actual} !== ${expected}`);
+    return;
+  }
+
+  console.log(`🍀🍀🍀 ${actual} === ${expected}`);
 };
+
+
+
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // pass
+assertArraysEqual([1, 2, 3], [3, 2, 1]); // fails
+assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // pass
+assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // fails
