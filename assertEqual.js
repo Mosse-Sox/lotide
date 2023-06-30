@@ -7,11 +7,11 @@ const assertEqual = function(actual, expected) {
   }
 
   if (matching === true) {
-    console.log(`🍀🍀🍀 ${actual} === ${expected}`);
+    console.log(`☽⍟☾ ☽⍟☾ ${actual} === ${expected} ☽⍟☾ ☽⍟☾`);
     return;
   }
 
-  console.log(`❗️❗️❗️ ${actual} !== ${expected}`);
+  console.log(`🫥🫥🫥 ${actual} !== ${expected} 🫥🫥🫥`);
 };
 
 assertEqual("Lighthouse Labs", "Bootcamp");

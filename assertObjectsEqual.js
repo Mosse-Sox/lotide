@@ -18,21 +18,21 @@ const eqArrays = function(array1, array2) {
 
 // this function returns true if two objects have the same key: value pairs and false otherwise
 // handles arrays as values but not objects as values
-const eqObjects = function(object1, object2) {
+const eqObjects = function(actual, expected) {
   let matching = true;
 
-  if (Object.keys(object1).length !== Object.keys(object2).length) {
+  if (Object.keys(actual).length !== Object.keys(expected).length) {
     matching = false;
     return matching;
   }
 
-  for (const key in object1) {
-    if (Array.isArray(object1[key])) {
-      matching = eqArrays(object1[key], object2[key]);
+  for (const key in actual) {
+    if (Array.isArray(actual[key])) {
+      matching = eqArrays(actual[key], expected[key]);
       return matching;
     }
 
-    if (!(key in object2) || object1[key] !== object2[key]) {
+    if (!(key in expected) || actual[key] !== expected[key]) {
       matching = false;
       return matching;
     }
@@ -42,17 +42,17 @@ const eqObjects = function(object1, object2) {
 };
 
 
-const assertObjectsEqual = function(object1, object2) {
+const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
 
-  let matching = eqObjects(object1, object2);
+  let matching = eqObjects(actual, expected);
 
   if (matching) {
-    console.log(`🍀🍀🍀 ${inspect(object1)} === ${inspect(object2)}`);
+    console.log(`☽⍟☾ ☽⍟☾ ${inspect(actual)} === ${inspect(expected)} ☽⍟☾ ☽⍟☾`);
     return;
   }
 
-  console.log(`❗️❗️❗️ ${inspect(object1)} !== ${inspect(object2)}`);
+  console.log(`🫥🫥🫥 ${inspect(actual)} !== ${inspect(expected)} 🫥🫥🫥`);
 };
 
 const pantsObject = { fabric: ["jean", "cotton"], length: 30 };

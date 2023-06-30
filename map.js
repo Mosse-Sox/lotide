@@ -25,9 +25,19 @@ const assertArraysEqual = function(actual, expected) {
   console.log(`☽⍟☾ ☽⍟☾ ${actual} === ${expected} ☽⍟☾ ☽⍟☾`);
 };
 
+const map = (arr, callBack) => {
+  const newArray = [];
+  arr.forEach(element => {
+    newArray.push(callBack(element));
+  });
+
+  return newArray;
+}
 
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // pass
-assertArraysEqual([1, 2, 3], [3, 2, 1]); // fails
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // pass
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // fails
+const array = ["beans", "treats", "toots", "scoops"];
+assertArraysEqual(map(array, (x) => x.length), [5, 6, 5, 6]);
+
+const words = ["ground", "control", "to", "major", "tom"];
+const results1 = map(words, word => word[0]);
+assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
