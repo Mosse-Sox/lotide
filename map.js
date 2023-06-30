@@ -32,7 +32,7 @@ const map = (arr, callBack) => {
   });
 
   return newArray;
-}
+};
 
 
 const array = ["beans", "treats", "toots", "scoops"];

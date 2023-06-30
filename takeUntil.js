@@ -27,7 +27,7 @@ const assertArraysEqual = function(actual, expected) {
 
 const takeUntil = (array, callback) => {
   const newArray = [];
-  i = 0;
+  let i = 0;
   while (!callback(array[i])) {
     newArray.push(array[i]);
     i++;
