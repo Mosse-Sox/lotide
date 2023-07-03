@@ -1,30 +1,3 @@
-const eqArrays = function(actual, expected) {
-  let matching = true;
-
-  for (let i = 0; i < actual.length; i++) {
-    const actualElement = actual[i];
-    const expectedElement = expected[i];
-
-    if (actualElement !== expectedElement || typeof (actualElement) !== typeof (expectedElement)) {
-      matching = false;
-      return matching;
-    }
-  }
-
-  return matching;
-};
-
-
-const assertArraysEqual = function(actual, expected) {
-
-  if (!eqArrays(actual, expected)) {
-    console.log(`❗️❗️❗️ ${actual} !== ${expected}`);
-    return;
-  }
-
-  console.log(`🍀🍀🍀 ${actual} === ${expected}`);
-};
-
 const middle = function(array) {
   let middleElements = [];
 
@@ -44,10 +17,4 @@ const middle = function(array) {
   return middleElements;
 };
 
-// test cases
-assertArraysEqual(middle([4,5,6]), [5]);
-assertArraysEqual(middle([4,5,6,7]), [5,6]);
-assertArraysEqual(middle([]), []);
-assertArraysEqual(middle([1]), []);
-assertArraysEqual(middle([1,2]), []);
-
+module.exports = middle; 
