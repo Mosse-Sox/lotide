@@ -1,19 +1,3 @@
-// this function returns a message based on if the values passed to it are equal or not
-const assertEqual = function(actual, expected) {
-  let matching = false;
-
-  if (actual === expected) {
-    matching = true;
-  }
-
-  if (matching === true) {
-    console.log(`🍀🍀🍀 ${actual} === ${expected}`);
-    return;
-  }
-
-  console.log(`❗️❗️❗️ ${actual} !== ${expected}`);
-};
-
 // this functions takes two arrays and returns a boolean value to represent if they are the same or not
 const eqArrays = function(array1, array2) {
   let matching = true;
@@ -32,7 +16,4 @@ const eqArrays = function(array1, array2) {
   return matching;
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // pass
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true); // fails
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // pass
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // pass
+module.exports = eqArrays; 
