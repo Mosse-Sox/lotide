@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@mosse-sox/lotide",
   "version": "1.0.0",
-  "description": "LHL Lotide Project",
+  "description": "mini Lodash clone library",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "tests"
@@ -14,7 +14,12 @@
     "url": "git+https://github.com/Mosse-Sox/lotide.git"
   },
   "keywords": [],
-  "author": "",
+  "author": 
+  {
+    "name" : "Autumn Potts",
+    "email" : "autumngreenie990@gmail.com",
+    "url" : "https://github.com/Mosse-Sox"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Mosse-Sox/lotide/issues"
