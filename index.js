@@ -7,6 +7,7 @@ const countOnly = require('./countOnly');
 const eqObjects = require('./eqObjects');
 const findKey = require('./findKey');
 const findKeyByValue = require('./findKeyByValue');
+const letterPositions = require('./letterPositions');
 
 module.exports = {
   countLetters: countLetters,
@@ -16,6 +17,7 @@ module.exports = {
   findKey: findKey,
   findKeyByValue: findKeyByValue,
   head: head,
+  letterPositions: letterPositions,
   middle: middle,
   tail: tail
 };
